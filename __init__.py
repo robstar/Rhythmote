@@ -88,8 +88,8 @@ class RhythmotePlugin (rb.Plugin):
 				except (ValueError, IndexError):
 					dialog.hide()
 				
-				#if port == self.port:
-				#	dialog.hide()
+				if port == self.port:
+					dialog.hide()
 				
 				self.port = port
 				self.client.set_string(self.gconf_keys['port'], self.port)
